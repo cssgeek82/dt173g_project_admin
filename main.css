@@ -1,0 +1,202 @@
+*, body {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0; 
+}
+body {
+    background-color: #e2e2e2; 
+}
+
+.mainheader {
+    width: 100%;
+    background-color: #07293f;
+    margin: 0; 
+    padding: 0; 
+}
+.mainheader h1 {
+    text-align: center; 
+    padding: 30px; 
+    margin: 0; 
+    color: #fff; 
+}
+.content {
+    max-width: 1000px; 
+    width: 100%; 
+    margin: auto; 
+    padding-top: 10px; 
+}
+.posts {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #000; 
+    margin: 0; 
+    margin-bottom: 10px; 
+}
+#education {
+    background-color: rgb(213, 219, 224); 
+}
+#work {
+    background-color:rgb(152, 171, 196); 
+}
+#webb {
+    background-color: rgb(180, 181, 187); 
+}
+
+.writetoscreen {
+    color: red;   
+    margin-top: 5px;
+    margin-bottom: 5px;  
+}
+
+/* Always hidden, but is needed to use in order to get "id" to work in update */
+.hideid { display: none; }  
+
+/* Tables */
+.table {
+    width: 100%; 
+}
+.table tr {
+    margin: 0; 
+    text-align: left; 
+}
+.table td {
+    padding: 10px 0;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-size: 14px;  
+    border-bottom: 1px solid #000; 
+    padding-right: 5px; 
+}
+.tdwebbone { grid-area: wone; word-break: break-all; }
+.tdwebbtwo { grid-area: wtwo;  word-break: break-all; }
+.tdwebbthree { grid-area: wthree; word-break: break-all; }
+.tdwebbfour { grid-area: wfour; word-break: break-all; }
+.tdwebbfive { grid-area: wfive; }
+.tdwebbsix { grid-area: wsix; }
+
+/* Adjust to screen sizes -tables */ 
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    #showWebb td { margin-top: 5px; border-bottom: none; }
+    #showWebb tr { border-bottom: 1px solid #000; }
+    .trwebb {
+        display: grid; 
+        grid-template-columns: 50% 50%; 
+        grid-template-areas:
+        "wone wone"
+        "wtwo wtwo"
+        "wthree wthree"
+        "wfour wfour"
+        "wfive wsix";
+    }
+}
+@media screen and (min-width: 801px) {
+    .trwebb {
+        display: grid; 
+        grid-template-columns: 20% 20% 20% 20% 10% 10%; 
+        grid-template-areas:
+        "wone wtwo wthree wfour wfive wsix";
+    }
+}
+
+/* Buttons */ 
+.upbtn {
+    margin-top: 5px; 
+    padding: 5px;
+    background-color: #143c57; 
+    color: #fff;
+    border: 1px solid #07293f; 
+    border-radius: 10px;  
+    cursor: pointer;
+}
+.upbtn:hover {
+    background-color: #07293f;
+}
+.delbtn {
+    margin-top: 5px; 
+    padding: 5px;
+    background-color: red; 
+    color: #fff;
+    border: 1px solid #000; 
+    border-radius: 10px;  
+    cursor: pointer;
+}
+.delbtn:hover {
+    background-color: darkred;
+}
+.addbtn {
+    margin-top: 5px; 
+    padding: 5px;
+    margin-left: 165px; 
+    background-color: #fff; 
+    color:  #07293f;
+    border: 1px solid #07293f; 
+    border-radius: 2px;  
+    cursor: pointer;
+}
+.addbtn:hover {
+    background-color: #143c57;
+    color: #fff; 
+}
+/* Smaller screen sizes -buttons*/ 
+@media screen and (min-width: 200px) and (max-width: 500px) { 
+    .addbtn {
+        margin-left: 0; 
+    }
+}
+
+.label { 
+    color: #000; 
+    padding-top: 10px; 
+    font-weight: bold; 
+    width: 160px; 
+    display: inline-flex; 
+}
+.forminput {
+    width: 100%; 
+    max-width: 300px; 
+}
+
+
+#updateStudy {
+    display: none; 
+}
+#updateWork {
+    display: none; 
+}
+#updateWebb {
+    display: none; 
+}
+
+
+
+
+
+
+
+
+/* !!! Log-in page !!! */
+#loginpage {
+    text-align: center; 
+}
+#loginerror {
+    display: none; 
+}
+#loginform {
+    margin-top: 30px; 
+}
+.loginfield {
+    margin-top: 5px; 
+    border-radius: 2px; 
+    border: 1px solid #07293f; 
+    padding: 2px 5px;
+}
+#loginbtn {
+    background-color: #fff;
+    border-radius: 2px; 
+    border: 1px solid #07293f; 
+    padding: 2px 5px;  
+}
+#loginbtn:hover {
+    background-color: #143c57;
+    color: #fff; 
+    cursor: pointer;
+}

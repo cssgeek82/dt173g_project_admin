@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logga in till admin-sidan</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="mainheader">
+        <h1>Logga in</h1>
+    </header>
+
+    <div class="content" id="loginpage">
+
+        <form id="loginform" >
+            <p><input type="text" name="username" id="userfield" class="loginfield" placeholder="Användarnamn"></p>
+            <p><input type="password" name="password" id="passfield" class="loginfield" placeholder="Lösenord"></p>
+            <p><input type="submit" value="Logga in" id="loginbtn"></p>
+        </form>
+
+        <div id="loginerror">
+            <p id="logerr_message">Ogiltigt användarnamn eller lösenord!</p>
+        </div>
+
+    </div> <!-- End div content -->
+
+    <script src="logins.js"></script>
+</body>
+</html>

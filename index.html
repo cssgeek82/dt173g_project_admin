@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-sida</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onload="loads()">   <!-- Starts function loads that starts functions to show posts  -->
+    
+    <header class="mainheader">
+        <h1>Administratörs sida</h1>
+    </header>
+
+    <div class="content">
+
+        <div class="posts" id="education"> <!-- div for education (studies) -->
+            <div class="read">
+                <h2>Min utbildning</h2>
+                <table id="showStudies" class="table"></table> <!-- Read education from main.js -->
+            </div>
+            <div>
+                <p id="writetoscreen_study" class="writetoscreen"></p>
+            </div>
+            <div class="add">
+                <h2>Lägg till utbildning</h2>
+                <form>
+                    <input type="text" name="id" id="id" class="hideid" /> <!-- Hidden element, is needed for id -->
+                    <label class="label" for="university">Skola: </label> <input type="text" name="university" id="university" class="forminput" /> <br />
+                    <label class="label" for="coursename">Kursnamn/program: </label> <input type="text" name="coursename" id="coursename" class="forminput" /><br />
+                    <label class="label" for="startdate">Startdatum: </label> <input type="date" name="startdate" id="startdate" class="forminput"/><br />
+                    <label class="label" for="enddate">Slutdatum: </label> <input type="date" name="enddate" id="enddate" class="forminput"/><br />
+                    <input type="button" id="writeStudy" name="writeStudy" value="Addera kurs/program" class="addbtn">
+                    <input type="button"  id="updateStudy" name ="updateStudy" value="Uppdatera kurs/program" class="addbtn">
+                </form>
+            </div>
+        </div> <!-- End div education (studies) -->
+
+        <div class="posts" id="work"> <!-- div for work experiences -->
+            <div class="read">
+                <h2>Min arbetserfarenhet</h2>
+                <table id="showWork" class="table"></table>  <!-- Read work experiences from main.js -->
+            </div>
+            <div>
+                <p id="writetoscreen_work" class="writetoscreen"></p>
+            </div>
+            <div class="add">
+                <h2>Lägg till arbete</h2>
+                <form>
+                    <input type="text" name="id_w" id="id_w"  class="hideid" /> <!--  Hidden element, is needed for id -->
+                    <label class="label" for="workplace">Arbetsplats: </label> <input type="text" name="workplace" id="workplace" class="forminput" /> <br />
+                    <label class="label" for="title">Titel: </label> <input type="text" name="title" id="title" class="forminput" /><br />
+                    <label class="label" for="datestart">Startdatum: </label> <input type="date" name="datestart" id="datestart" class="forminput"/><br />
+                    <label class="label" for="dateend">Slutdatum: </label> <input type="date" name="dateend" id="dateend" class="forminput"/><br />
+                    <input type="button" id="writeWork" name="writeWork" value="Addera arbete" class="addbtn"> 
+                    <input type="button" id="updateWork" name ="updateWork" value="Uppdatera arbete" class="addbtn">
+                </form>
+            </div>
+        </div> <!-- End div work experiences -->
+
+        <div class="posts" id="webb"> <!-- div for created webbpages -->
+            <div class="read">
+                <h2>Mina skapade webbplatser</h2>
+                <table id="showWebb" class="table"></table>  <!-- Read created webbpages from main.js -->
+            </div>
+            <div>
+                <p id="writetoscreen_webb" class="writetoscreen"></p>
+            </div>
+            <div class="add">
+                <h2>Lägg till webbplats</h2>
+                <form>
+                    <input type="text" name="id_p" id="id_p"  class="hideid" /> <!--  Hidden element, is needed for id -->
+                    <label class="label" for="webbtitle">Webbplatsens titel: </label> <input type="text" name="webbtitle" id="webbtitle" class="forminput" /> <br />
+                    <label class="label" for="webburl">Url till webbplatsen: </label> <input type="url" name="webburl" id="webburl" class="forminput" /><br />
+                    <label class="label" for="webbdesc">Beskrivning av webbplatsen: </label> <input type="text" name="webbdesc" id="webbdesc" class="forminput"/><br />
+                    <label class="label" for="webbpicurl">Url till bild av webbplatsen: </label> <input type="url" name="webbpicurl" id="webbpicurl" class="forminput"/><br />
+                    <input type="button" id="writeWebb" name="writeWebb" value="Addera webbplats" class="addbtn"> 
+                    <input type="button" id="updateWebb" name ="updateWebb" value="Uppdatera webbsida" class="addbtn">
+                </form>
+            </div>
+        </div> <!-- End div "webb" -created webbpages -->
+
+    </div> <!-- End div content -->
+
+    <script src="main.js"></script>  
+    <script src="extras.js"></script> 
+
+    <script> // JS to check if logged in (via sessionsStorage)
+        if ("value" in sessionStorage) {
+        }
+        else {
+            location.assign("login.html")   // Redirects to login-page
+        }
+    </script>
+
+</body>
+</html>
